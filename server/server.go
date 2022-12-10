@@ -15,18 +15,18 @@ import (
 func main() {
 	args := os.Args
 	base.LOG.Init(args[1])
-	if args[1] == "gm"{
+	if args[1] == "gm" {
 		gm.SERVER.Init()
-	}else if args[1] == "gate"{
+	} else if args[1] == "gate" {
 		gate.SERVER.Init()
-	}else if args[1] == "game"{
+	} else if args[1] == "game" {
 		game.SERVER.Init()
-	} else if args[1]  == "db"{
+	} else if args[1] == "db" {
 		db.SERVER.Init()
 	}
 
 	base.SEVERNAME = args[1]
-	
+
 	InitMgr(args[1])
 
 	c := make(chan os.Signal, 1)
